@@ -1,0 +1,25 @@
+.todolist{
+  padding-top: 20px;
+  width: inherit;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 20px;
+}
+input{
+  width:800px;
+  height: 60px;
+  border-radius: 5px;
+  background-color: #cccccc;
+  box-shadow: 0 0 4px black;
+
+  font-size: 35px;
+
+}
+button{
+  height: 50px;
+  border-radius: 5px;
+  font-size: 35px;
+  box-shadow: 1px 1px 5px black;
+width:400px;
+}
