@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+
 
 @Component({
   selector: 'app-todolist',
@@ -6,20 +7,37 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./todolist.component.css']
 })
 export class TodolistComponent implements OnInit {
+  text: string[] = [];
+  task: string = '';
+  completed: boolean | undefined;
+  classname: string = 'item_1';
+  newItem: string[] = [];
 
-  text: '' | undefined;
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
-  // tslint:disable-next-line:typedef
-   addText(){
-
+  done(event: any) {
+    if (!this.completed) {
+      this.classname = 'item_1b'
+      return this.completed = true
+    } else this.classname = 'item_1'
+    return this.completed = false
   }
 
-   inputHandler = (event: any) => {
-    const value = event.target.value
-    this.text = value
+
+//   remove(id) {
+//    this.newItem = this.text.filter((item) => item.id !== id){
+//      this.text.push(this.newItem.toString())
+//   }
+// }
+
+  myEvent(event: any) {
+    if (this.task !== '') {
+      this.text.push(this.task)
+      this.task = '';
+    }
   }
 }

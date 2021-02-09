@@ -1,4 +1,4 @@
-.todolist{
+.todolist {
   padding-top: 20px;
   width: inherit;
   display: flex;
@@ -6,8 +6,9 @@
   flex-wrap: wrap;
   row-gap: 20px;
 }
-input{
-  width:800px;
+
+input {
+  width: 800px;
   height: 60px;
   border-radius: 5px;
   background-color: #cccccc;
@@ -16,10 +17,72 @@ input{
   font-size: 35px;
 
 }
-button{
+
+input:focus {
+  background: rgb(227, 227, 227);
+  background: radial-gradient(circle, rgba(227, 227, 227, 1) 100%, rgba(243, 248, 249, 1) 100%);
+}
+
+.mainbutton {
   height: 50px;
   border-radius: 5px;
   font-size: 35px;
-  box-shadow: 1px 1px 5px black;
-width:400px;
+  box-shadow: 5px 7px 5px black;
+  width: 400px;
+  transition-duration: 0.2s;
+  margin-bottom: 50px;
 }
+
+button:hover {
+  background: rgb(189, 189, 189);
+  background: radial-gradient(circle, rgba(189, 189, 189, 1) 35%, rgba(193, 197, 198, 1) 100%);
+}
+
+button:active {
+  box-shadow: 0 0 1px black;
+  transform: translate3d(5px, 5px, 1px);
+}
+
+.itemList {
+  display: flex;
+  font-size: 35px;
+  border-bottom: 2px solid grey;
+  margin: 10px 10px 0 10px;
+}
+
+
+
+.item_1 {
+  flex: 1;
+  text-shadow: 1px 8px 5px grey;
+
+}
+.item_1b{
+  flex: 1;
+  text-decoration: line-through;
+  color: lightcoral;
+}
+
+.item_2 {
+margin: 0 20px 0 0;
+  text-shadow: 1px 8px 5px grey;
+
+}
+.item_2:hover {
+transform: translate3d(0, 3px, 1px);
+  text-shadow: 1px 4px 2px grey;
+}
+
+.item_3{
+
+  text-shadow: 1px 8px 5px grey;
+}
+.item_3:hover {
+  transform: translate3d(0, 3px, 1px);
+  text-shadow: 1px 4px 2px grey;
+}
+a{
+  text-decoration: none ;
+  color: black;
+}
+
