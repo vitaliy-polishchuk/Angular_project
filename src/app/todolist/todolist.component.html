@@ -1,9 +1,16 @@
 <div class="todolist">
-  <input [(ngModel)]="task"  type="text" placeholder=" Enter your task &#9998;">
+  <input [(ngModel)]="currentInputText" type="text" placeholder=" Enter your currentInputText &#9998;">
 
-  <button class="mainbutton" (click)="myEvent($event)" >New</button>
+  <button class="mainbutton" (click)="addNewItem()">New</button>
 </div>
 
-<div class="itemList" *ngFor="let item of text; let i = index" ><div [ngClass]="classname">{{i + 1}}. {{item}}</div> <div class="item_2"><a (click)="done($event)" href="#">&#10003;</a></div><div class="item_3">
-  <a href="#" >&#10005;</a></div></div>
+<div class="itemList" *ngFor="let item of listOfItems; let i = index">
+  <div [ngClass]="getClassName(item)">{{i + 1}}. {{item.name}}</div>
+  <div class="item_2">
+    <a (click)="toggleComplete(item)" href="#">&#10003;</a>
+  </div>
+  <div class="item_3">
+    <a (click)="remove(item)" href="#">&#10005;</a>
+  </div>
+</div>
 

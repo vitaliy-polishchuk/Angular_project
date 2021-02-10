@@ -1,5 +1,10 @@
 import {Component, OnInit} from '@angular/core';
 
+type TodoItemType = {
+  name: string
+  completed: boolean
+  priority: number
+};
 
 @Component({
   selector: 'app-todolist',
@@ -7,37 +12,69 @@ import {Component, OnInit} from '@angular/core';
   styleUrls: ['./todolist.component.css']
 })
 export class TodolistComponent implements OnInit {
-  text: string[] = [];
-  task: string = '';
+  listOfItems: TodoItemType[] = [];
+  currentInputText = '';
   completed: boolean | undefined;
-  classname: string = 'item_1';
+  classname = 'item_1';
   newItem: string[] = [];
 
   constructor() {
   }
 
   ngOnInit(): void {
+    const item: TodoItemType = {
+      name: 'Blakaj',
+      completed: true,
+      priority: 2,
+    };
+    this.listOfItems.push(item);
+
+    const item2: TodoItemType = {
+      name: 'Bfgdfgfaj',
+      completed: false,
+      priority: 2
+    };
+    this.listOfItems.push(item2);
+
+    const item3: TodoItemType = {
+      name: 'Blakaertertretet',
+      completed: true,
+      priority: 4
+    };
+    this.listOfItems.push(item3);
   }
 
-  done(event: any) {
-    if (!this.completed) {
-      this.classname = 'item_1b'
-      return this.completed = true
-    } else this.classname = 'item_1'
-    return this.completed = false
+  toggleComplete(item: TodoItemType): void {
+    item.completed = !item.completed;
   }
 
 
-//   remove(id) {
-//    this.newItem = this.text.filter((item) => item.id !== id){
-//      this.text.push(this.newItem.toString())
-//   }
-// }
+  remove(item: TodoItemType): void {
+    this.listOfItems = this.listOfItems.filter((currentItem: TodoItemType) => {
+      const isItemForDeleting = item.name === currentItem.name;
+      return isItemForDeleting ? false : true;
+    });
+  }
 
-  myEvent(event: any) {
-    if (this.task !== '') {
-      this.text.push(this.task)
-      this.task = '';
+
+  addNewItem(): void {
+    if (this.currentInputText !== '') {
+      const newItem: TodoItemType = {
+        name: this.currentInputText,
+        completed: false,
+        priority: Math.floor(Math.random() * 6) + 1
+      };
+      this.listOfItems.push(newItem);
+      this.currentInputText = '';
     }
   }
+
+  getClassName(item: TodoItemType): string {
+    if (!item.completed) {
+      return 'item_1';
+    } else {
+      return 'item_1b';
+    }
+  }
+
 }
