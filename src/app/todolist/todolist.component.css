@@ -55,12 +55,18 @@ button:active {
 .item_1 {
   flex: 1;
   text-shadow: 1px 8px 5px grey;
+  text-align: left;
 
+}
+.item_1:hover {
+  text-shadow: 1px 4px 2px grey;
+  letter-spacing: 2px;
 }
 .item_1b{
   flex: 1;
   text-decoration: line-through;
   color: lightcoral;
+  text-align: left;
 }
 
 .item_2 {

@@ -1,12 +1,12 @@
 
 
 .header {
-  width: inherit;
+  width: 1000px;
   background: rgb(63,94,251);
   background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,237,252,0.7357317927170868) 100%);
   height: 110px;
   text-align: center;
-  margin: 0 0 0 0;
+  margin: 0 auto;
   border-bottom: 3px solid black;
 }
 
@@ -21,4 +21,13 @@ h2 {
   justify-content: space-evenly;
   width: 200px;
   font-size: 25px;
+}
+.navbar div a{
+  text-decoration: none;
+  color: black;
+}
+
+.navbar div a:hover {
+  text-shadow: 1px 1px 6px black;
+
 }
