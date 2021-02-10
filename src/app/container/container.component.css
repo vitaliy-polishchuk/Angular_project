@@ -1,9 +1,9 @@
-.container {
-  width: 1000px;
-  height: auto;
-  min-height: 2000px;
-  margin: 0 auto;
-  border: 1px solid #ccc;
-  background: rgb(236,231,231);
-  background: linear-gradient(90deg, rgba(236,231,231,1) 8%, rgba(254,215,215,1) 80%, rgba(204,202,202,1) 100%);
-}
+/*.container {*/
+/*  width: 1000px;*/
+/*  height: auto;*/
+/*  min-height: 2000px;*/
+/*  margin: 0 auto;*/
+/*  border: 1px solid #ccc;*/
+/*  background: rgb(236,231,231);*/
+/*  background: linear-gradient(90deg, rgba(236,231,231,1) 8%, rgba(254,215,215,1) 80%, rgba(204,202,202,1) 100%);*/
+/*}*/

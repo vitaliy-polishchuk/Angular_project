@@ -1,7 +1,9 @@
+
+
 <div class="todolist">
   <input [(ngModel)]="currentInputText" type="text" placeholder=" Enter your task &#9998;">
 
-  <button class="mainbutton" (click)="addNewItem()">New</button>
+  <button class="btn btn-primary btn-lg" (click)="addNewItem()">New</button>
 </div>
 
 <div class="itemList" *ngFor="let item of listOfItems; let i = index">

@@ -10,6 +10,7 @@ import {FormsModule} from '@angular/forms';
 import { AnimationComponent } from './animation/animation.component';
 import { NotfoundComponent } from './notfound/notfound.component';
 import { InfoComponent } from './info/info.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { InfoComponent } from './info/info.component';
     imports: [
         BrowserModule,
         AppRoutingModule,
-        FormsModule
+        FormsModule,
+        NgbModule
     ],
   providers: [],
   bootstrap: [AppComponent]

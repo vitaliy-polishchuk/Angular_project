@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import {AppComponent} from './app.component';
 import {AnimationComponent} from './animation/animation.component';
 import {NotfoundComponent} from './notfound/notfound.component';
 import {InfoComponent} from './info/info.component';
