@@ -1,12 +1,14 @@
 
-  <div class="container">
-    <h2 class="d-flex justify-content-center">List</h2>
-    <div class="d-flex justify-content-evenly">
-    <div><a routerLink="">Home</a></div>
-    <div><a routerLink="/info">Info</a></div>
-    <div><a routerLink="/animation">Animation</a></div>
+  <div class="">
+
+    <h2 class="d-flex justify-content-center py-4 px-0 bg-primary">List</h2>
+    <ul class="row text-center nav nav-tabs" role="tablist">
+    <li class="col-lg-4 nav-item"><a class="nav-link active h3" data-toggle="tab" routerLink="">Home</a></li>
+    <li class="col-lg-4 nav-item"><a class="nav-link h3" data-toggle="tab"  routerLink="/info">Info</a></li>
+    <li class="col-lg-4 nav-item"><a class="nav-link h3" data-toggle="tab"  routerLink="/animation">Animation</a></li>
+    </ul>
       <router-outlet></router-outlet>
     </div>
-  </div>
+
 
 
